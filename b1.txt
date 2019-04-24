@@ -1,0 +1,74 @@
+
+#subset
+
+>mydata<-mtcars
+>subset(mydata,mpg>20,select=c("mpg"));
+
+>subset(mydata,mpg>20,select=c(1:4));
+
+
+
+#MERGE 
+
+> n=c(1,2,3,4)
+> prod=c("bread","butter","egg","jam")
+> df=data.frame(n,prod)
+> df
+
+
+> price=c(10,20,30,40)
+> df2=data.frame(n,price)
+> df2
+
+> merge(df,df2,by="n",all=TRUE)
+
+> merge(df,df2,by="n",all.x=TRUE)
+
+> n=c(3,4,5,6)
+> df2=data.frame(n,price)
+> df2
+
+> merge(df,df2,by="n",all.x=TRUE)
+
+> merge(df,df2,by="n",all.y=TRUE)
+
+
+#SORT
+
+> sort(df$n)
+
+> df[sort(df$n),c(1,2)]
+
+> df[order(df$n),c(1,2)]
+
+> n=(3,2,5,6)
+> df[order(df$n),c(1,2)]
+
+> df=data.frame(n,prod)
+> df
+
+> df[order(df$n),c(1,2)]
+
+> df[sort(df$n),c(1,2)]
+
+> df[rank(df$n),c(1,2)]
+
+> df[order(df$n,decreasing=TRUE),c(1,2)]
+
+> order(mtcars$mpg)
+
+> sort(mtcars$mpg)
+
+#Transposing
+
+t(mtcars)
+
+#Melt
+
+> cars <- mtcars[1:5,1:4]
+> cars
+
+>md <- melt(cars, id=(c("mpg", "hp")))
+>md
+
+
