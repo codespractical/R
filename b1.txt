@@ -24,40 +24,40 @@
 
 > merge(df,df2,by="n",all.x=TRUE)
 
-> n=c(3,4,5,6)
-> df2=data.frame(n,price)
-> df2
+n=c(3,4,5,6)
+df2=data.frame(n,price)
+df2
 
-> merge(df,df2,by="n",all.x=TRUE)
+merge(df,df2,by="n",all.x=TRUE)
 
-> merge(df,df2,by="n",all.y=TRUE)
+merge(df,df2,by="n",all.y=TRUE)
 
 
 #SORT
 
-> sort(df$n)
+sort(df$n)
 
-> df[sort(df$n),c(1,2)]
+df[sort(df$n),c(1,2)]
 
-> df[order(df$n),c(1,2)]
+df[order(df$n),c(1,2)]
 
-> n=(3,2,5,6)
-> df[order(df$n),c(1,2)]
+n=(3,2,5,6)
+df[order(df$n),c(1,2)]
 
-> df=data.frame(n,prod)
-> df
+df=data.frame(n,prod)
+df
 
-> df[order(df$n),c(1,2)]
+df[order(df$n),c(1,2)]
 
-> df[sort(df$n),c(1,2)]
+df[sort(df$n),c(1,2)]
 
-> df[rank(df$n),c(1,2)]
+df[rank(df$n),c(1,2)]
 
-> df[order(df$n,decreasing=TRUE),c(1,2)]
+df[order(df$n,decreasing=TRUE),c(1,2)]
 
-> order(mtcars$mpg)
+order(mtcars$mpg)
 
-> sort(mtcars$mpg)
+sort(mtcars$mpg)
 
 #Transposing
 
@@ -65,10 +65,10 @@ t(mtcars)
 
 #Melt
 
-> cars <- mtcars[1:5,1:4]
-> cars
+cars <- mtcars[1:5,1:4]
+cars
 
->md <- melt(cars, id=(c("mpg", "hp")))
->md
+md <- melt(cars, id=(c("mpg", "hp")))
+md
 
 
